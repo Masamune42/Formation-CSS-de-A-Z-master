@@ -1,0 +1,21 @@
+.carte {
+    width: 400px;
+    height: 500px;
+    background: #333;
+    color: #F1F1F1;
+    margin: 200px auto;
+    border-radius: 5px;
+}
+
+.monImg {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    margin: 10px 0 10px 5px;
+}
+
+p {
+    margin: 5px;
+}

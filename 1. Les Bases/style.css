@@ -1,0 +1,137 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    /* AVANT BACKGROUND */
+    /* width: 100%;
+    height: 500px; */
+
+    /* BACKGROUND */
+    width: 100%;
+    /* 100% de la hauteur du navigateur */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    /* TAILLES */
+    /* Il existe 2 unités de mesure : absolu (px) et relatif (%, relatif à son parent) */
+    /* width: 50%; */
+    /* Largeur min / max d'un élément */
+    /* min-width: 500px;
+    max-width: 700px;
+    height: 50%; */
+
+    /* COULEURS */
+    /* Déclaration rgba() */
+    /* background-color: rgba(34, 224, 43, 0.9); */
+    /* Déclaration par code hexa */
+    background-color: #22e02be6;
+    /* Déclaration hsla */
+    /* 1. de 0 à 360° sur la palette des couleurs */
+    /* 2. saturation, 3. luminosité, 4. opacité */
+    /* background-color: hsla(123, 75%, 51%, 0.902); */
+
+    /* MARGIN, PADDING, BORDER */
+    height: 200px;
+    width: 200px;
+    background-color: #4169e1;
+    /* PADDING : On a poussé à l'intérieur de 20px de chaque côté */
+    padding: 20px;
+    /* BORDER */
+    border: 10px solid #000;
+    /* MARGIN */
+    /* margin: 50px; */
+    /* hb gd */
+    /* margin: 10px 20px; */
+    /* h d b g : sens des aiguilles d'une montre */
+    /* margin: 10px 20px 10px 20px; */
+    /* Astuce pour centrer horizontalement : 0px haut-bas, auto pour gauche-droite */
+    margin: 0 auto;
+
+    /* MODELE DE BOITE */
+    /* Permet de prendre en compte le padding et le border dans le calcul de la hauteur et largeur */
+    /* On le place dans le sélecteur universel (*) en général */
+    box-sizing: border-box;
+}
+
+/* DISPLAY */
+.box1 {
+    background: salmon;
+    /* INLINE */
+    /* Permet de prendre seulement l'espace du contenu */
+    /* Il n'y a pas de margin après le contenu qui s'étend à droite des éléments */
+    /* On ne peut pas modifier width / height */
+    display: inline;
+}
+
+.box2 {
+    background: teal;
+    /* Un élément sera en ligne ET on pourra modifier width / height */
+    display: inline-block;
+    width: 100px;
+    height: 200px;
+}
+
+.box3 {
+    background: lightcoral;
+    /* Fait disparaitre un élément MAIS il reste dans le DOM, souvent utilisé en JS */
+    display: none;
+}
+
+/* IMAGE */
+.monImg {
+    /* width: 250px;
+    height: 250px; */
+
+    /* BORDER-RADIUS */
+    /* Fonctionne en px ou % */
+    /* border-radius: 50%; */
+
+    /* RESPONSIVE */
+    width: 100%;
+    height: auto;
+}
+
+/* BACKGROUND */
+.accueil {
+    width: 100%;
+    /* CLASSIQUE */
+    /* height: 900px; */
+    /* RESPONSIVE */
+    /* Il faut de base avoir une image de bonne qualité */
+    height: 100%;
+    /* Couleur de fond */
+    /* background-color: #333; */
+    /* Lien de l'image */
+    background-image: url(img1.jpg);
+    /* Position de l'image */
+    background-position: center;
+    /* Répétition de l'image (repeat par défaut) */
+    background-repeat: no-repeat;
+    /* Etire l'image pour qu'elle remplisse entièrement le container */
+    /* Utile quand on a une grande zone où on veut qu'il y a l'image */
+    /* Attention : si l'image n'est pas assez grande */
+    background-size: cover;
+}
+
+/* TEXTE */
+h1 {
+    font-size: 40px;
+    /* Espacement entre les lettres */
+    /* letter-spacing: 10px; */
+    color: red;
+    /* De base le h1 à une margin */
+    margin: 0;
+    /* Alignement du texte */
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+    /* Hauteur de ligne : nombre de fois la taille du texte sans unité, sinon en px */
+    line-height: 2;
+    font-family: sans-serif;
+}
