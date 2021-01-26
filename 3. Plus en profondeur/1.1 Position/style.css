@@ -8,14 +8,26 @@ body {
     width: 300px;
     height: 300px;
 }
+/* De base tous nos éléments ont une position static */
+/* A partir du moment où on change sa propriété de position, un élément est positionné et on peut modifier sa position */
+/* C'est le dernier élément positionné qui va au-dessus des autres */
+/* POSITION RELATIVE */
+/* position: relative => laisse l'élément dans le flux d'origine */
 .posRel {
     background: crimson;
+    position: relative;
+    left: 50px;
+    /* top: 100px; */
+    /* z-index permet de faire des couches de positionnement */
+    /* Mettre à -1 permet de passer derrières les autres éléments */
+    z-index: 100;
 }
 .parent {
     margin: 20px;
     width: 400px;
     height: 400px;
     background: salmon;
+    position: relative;
 }
 
 .element {
@@ -23,12 +35,25 @@ body {
     height: 100px;
     background: aliceblue;
 }
+/* POSITION ABSOLUE */
+/* On sort l'élément de son flux et le positionne au-dessus des autres */
+/* Si l'élément n'a pas de parent positionné, alors il sera positionné par rapport au body */
 .posAbs {
     width: 100px;
     height: 100px;
     background: blueviolet;
+    position: absolute;
+    /* On centre parfaitement cet élément */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+/* POSITION FIXED */
+/* Sort du flux et fixe l'élément à l'écran */
 .posFix {
     background: yellowGreen;
+    position: fixed;
+    top: 0px;
+    right: 0px;
 }
