@@ -1,0 +1,31 @@
+/* Règle des cascades : le dernier élément déclaré l'emporte */
+/* h1 {
+    color: red;
+}
+
+h1 {
+    color: green;
+} */
+
+/* SPECIFICITE */
+/* La spécificité des ID est plus grande que celle des classes */
+/* inline CSS > ID > classe > sélecteur */
+/* !important passe par dessus tout le reste, à utiliser avec prudence */
+/* #monTitre {
+    color: crimson;
+}
+
+.titre {
+    color: violet;
+}
+
+h1 {
+    color: green !important;
+} */
+
+/* HERITAGE */
+/* Certains paramètres s'héritent comme la couleur et la taille. */
+.parent {
+    color: violet;
+    font-size: 80px;
+}
