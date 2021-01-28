@@ -2,8 +2,10 @@ body {
     margin: 0;
     padding: 0;
     background: #262626;
+    /* Le body a une largeur mais n'a pas de hauteur de base */
     height: 100vh;
 }
+
 .box {
     display: flex;
     justify-content: center;
@@ -13,46 +15,65 @@ body {
     font-family: sans-serif;
     margin-bottom: 15px;
 }
+
+/* vw : Unité relative à la largeur de la fenêtre */
 .vwMoitie {
     height: 200px;
     width: 50vw;
     background: crimson;
 }
+
 .percParent {
     width: 500px;
 }
 
+/* % : Unité relative au parent */
 .percMoitie {
     height: 200px;
     width: 50%;
     background: crimson;
 }
 
+/* px : Unité absolue */
 .pixelMoitie {
     height: 200px;
     width: 200px;
     background: crimson;
 }
+
+/* vh : Unité relative à la hauteur de la fenêtre */
 .vhUnit {
-    height: 25%;
+    height: 25vh;
     width: 50%;
     background: crimson;
 }
+
 .txt {
     color: #f1f1f1;
     font-family: sans-serif;
 }
+
 /* txt px */
 .titreEnPx {
     font-size: 70px;
 }
+
 /* txt Em */
-.parentEm{
+.parentEm {
     font-size: 40px;
 }
+
+/* em : fait référence à la taille du parent */
+/* 1em = 100% de la taille du parent, 2em = 200%... */
+/* Si le parent n'a pas de taille définie, il va être lié à l'élément root */
 .titreEnEM {
     font-size: 1em;
 }
+/* Référence HTML pour les REM ou EM si pas de parent avec uen taille */
+html {
+   font-size: 20px;
+}
+/* rem : fait référence à l'élément root HTML */
 .titreEnREM {
     font-size: 1rem;
 }
