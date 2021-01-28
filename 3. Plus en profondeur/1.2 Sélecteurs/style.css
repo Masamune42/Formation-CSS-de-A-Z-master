@@ -1,0 +1,97 @@
+/* Sélecteur universel, spécificité très basse */
+/* *,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+/* Sélecteur de type élément HTML */
+p {
+    font-size: 35px;
+}
+
+/* Sélecteur sur plusieurs classes dans le même élément */
+.txt1.txt2 {
+    color: violet;
+}
+
+/* Sélecteur toutes les classes enfant qui sont dans parent  */
+.parent .enfant {
+    color: red;
+}
+
+/* Sélecteur de l'ID, meilleur spécificité que la classe */
+#monId {
+    color: blue;
+}
+
+/* Sélecteur sur les éléments HTML qui ont la classe introduction */
+p.introduction {
+    color: gold;
+}
+
+/* Sélecteur sur tous les span et h5 */
+span, h5 {
+    color: firebrick;
+    font-size: 40px;
+}
+
+/* Sélecteur toutes les classes action2 enfants directs qui sont dans action1 */
+.action1 > .action2 {
+    background: pink;
+}
+
+/* Sélecteur sur le prochain p au même niveau qui suivent des div */
+div + p {
+    background: black;
+}
+
+/* Sélecteur sur tous les éléments de classe titre2 au même niveau qui suivent des classes titre1 */
+.titre1 ~ .titre2 {
+    background: red;
+}
+
+/* Partie 2 */
+/* Tous les attributs title qui ont la valeur Hello */
+[title~="Hello"] {
+    background: #000;
+}
+
+/* Pseudo classe checked : quand un input est coché */
+input:checked {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+/* Pseudo classe first-letter : Uniquement sur la 1ère lettre */
+.txtFirst::first-letter {
+    font-size: 200px;
+}
+
+/* Pseudo classe first-line : Uniquement sur la 1ère ligne */
+.txtFirst2::first-line {
+    font-size: 200px;
+}
+
+/* Pseudo classe first-of-type : pour sélectionner le 1er élément d'une fratrie */
+.item:first-of-type {
+    background: red;
+}
+
+/* Pseudo classe last-of-type : pour sélectionner le dernier élément d'une fratrie */
+.item:last-of-type {
+    background: red;
+}
+
+/* On sélectionne le 3e enfant parmi une fratrie */
+.item:nth-child(3) {
+    background: green;
+}
+
+/* On sélectionne tous les item sauf le 5e enfant */
+.item:not(:nth-child(5)) {
+    letter-spacing: 5px;
+}
