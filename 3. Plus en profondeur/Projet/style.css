@@ -1,0 +1,40 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    font-family: sans-serif;
+}
+
+.container {
+    position: absolute;
+    width: 600px;
+    padding: 30px;
+    background: #F1F1F1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background: url('ressources/img1.jpg');
+    /* Couvre l'espace donné */
+    background-size: cover;
+    /* Centrer */
+    background-position: center;
+    border-radius: 50%;
+    /* On le sort du flux, et les éléments qui suivent seront autour */
+    float: left;
+    margin: 0px 30px 20px 0px;
+    /* On indique la forme du contour pour que les éléments soient mieux placé autour de la forme de l'image */
+    shape-outside: circle();
+}
