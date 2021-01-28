@@ -13,9 +13,21 @@ body {
     width: 80px;
 }
 
+/* Bug des float : quand on place 2 élément dans un container qui a normalement un background il n'a plsu de hauteur */
 .box1 {
+    float: left;
     background: crimson;
 }
+
 .box2 {
+    float: right;
     background: turquoise;
+}
+
+/* Correction du bug */
+.container::after {
+    content: "";
+    display: block;
+    /* Dit que l'élément qu'il doit être poussé après les éléments flotants, donc il aura une hauteur */
+    clear: both;
 }
