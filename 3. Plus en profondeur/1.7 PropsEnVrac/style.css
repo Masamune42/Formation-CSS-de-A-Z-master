@@ -2,6 +2,10 @@
     width: 300px;
     height: 300px;
     background: salmon;
+    border: 5px solid forestgreen;
+    border-radius: 50%;
+    border-top-left-radius: 50px;
+    border-top-color: red;
 }
 
 .box2 {
@@ -9,5 +13,18 @@
     width: 300px;
     height: 300px;
     background: violet;
+    /* x, y, flou / étalement / solidité, couleur + opacité */
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
+ul {
+    /* Enlever les points de la liste */
+    list-style-type: none;
+}
+
+a {
+    /* Retire le soulignement du lien */
+    text-decoration: none;
+    color: #000;
+}
