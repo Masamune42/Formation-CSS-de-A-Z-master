@@ -4,12 +4,27 @@
     background: #fa8072;
 }
 
+/* active : quand je clic sur l'élément */
+.boxActive:active {
+    background: red;
+}
+
 .inpFocus {
     width: 250px;
 }
 
+/* focus : quand on est dans l'input */
+.inpFocus:focus {
+    background: violet;
+}
+
 .pHover {
     font-size: 50px;
+}
+
+/* hover : quand on survole l'élément */
+.pHover:hover {
+    background: crimson;
 }
 
 .inpChecked {
@@ -17,8 +32,26 @@
     height: 50px;
 }
 
+/* checked : case cochée */
+.inpChecked:checked {
+    width: 150px;
+    height: 150px;
+}
+
+
 a {
     font-size: 30px;
 }
 
+/* Sur un site visité */
+a:visited {
+    color: gold;
+}
 
+/* Pour cibler des éléments */
+/* 2n : pour tous les éléments avec un multiple de 2 */
+/* odd : tous les éléments pairs */
+/* even : tous les éléments impairs */
+.item:nth-child(2n) {
+    background: red;
+}
