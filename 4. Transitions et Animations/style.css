@@ -1,8 +1,8 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: #333;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #333;
+  height: 100vh;
 }
 
 .box {
@@ -10,5 +10,48 @@ body {
   width: 300px;
   height: 300px;
   margin: 30px;
+  /* TRANSFORM */
+  /* Translate sur x et y */
+  /* transform: translate(50px, 50px); */
+  /* Rotation en degré */
+  /* transform: rotate(45deg); */
+  /* Augmente la taille d'un élément */
+  /* transform: scale(2); */
+  /* Distortion */
+  /* transform: skew(50deg); */
+  /* matrix : mélange de tout */
+  /* transform: matrix(1, 2, 3, 4); */
+  /* Mélange de plusieurs transform */
+  /* transform: scale(1.5) rotate(45deg); */
+  /* Les transform ne fonctionnent pas sur les éléments de type inline comme span */
+
+  /* TRANSITION */
+  /* On peut aussi écrire en ms */
+  transition-duration: 0.4s;
+  /* On indique les propriétés qu'on a envie de changer */
+  /* On peut aussi utiliser : all */
+  /* transition-property: background, width; */
+  /* Indique la façon dont se fait l'animation */
+  /* linear : linéaire
+  ease-in : début lent et rapide après
+  ease-out : rapide vert le début + milieu et lent à la fin
+  ease-in-out : lent début + fin et rapide au milieu */
+  /* transition-timing-function: ease-in; */
+  /* ease-in customisé */
+  /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  /* délai avant transition */
+  /* transition-delay: 1s; */
+  /* Toutes les trasitions en une propriété */
+  transition: all 400ms ease-in-out 1s;
 }
 
+span {
+  font-size: 30px;
+  color: #F1F1F1;
+}
+
+/* TRANSITION */
+.box:hover {
+  background: forestgreen;
+  width: 400px;
+}
