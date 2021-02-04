@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    width: 400px;
+    height: auto;
+    margin: 70px auto 0px auto;
+    margin-top: 70px;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-out;
+}
+
+.overlay {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: opacity 0.5s ease-out;
+}
+
+.text {
+    background-color: rgb(76, 147, 175);
+    color: white;
+    font-size: 18px;
+    padding: 16px 32px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+.container:hover img {
+    opacity: 0.3;
+}
+
+.container:hover .text {
+    opacity: 1;
+}
