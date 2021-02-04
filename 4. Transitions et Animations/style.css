@@ -42,7 +42,20 @@ body {
   /* délai avant transition */
   /* transition-delay: 1s; */
   /* Toutes les trasitions en une propriété */
-  transition: all 400ms ease-in-out 1s;
+  /* transition: all 400ms ease-in-out 1s; */
+
+  /* ANIMATION */
+  position: absolute;
+  animation-name: spinAndMove;
+  animation-duration: 2s;
+  /* Nombre d'itération, nombre ou infinite */
+  /* animation-iteration-count: infinite; */
+  /* forwards: garde l'élément à son animation de fin */
+  /* animation-fill-mode: forwards; */
+  /* Alterne du début à la fin et retourne à la fin */
+  /* animation-direction: alternate; */
+  /* animation-timing-function: ease-in; */
+  animation: spinAndMove 2s infinite alternate ease-in;
 }
 
 span {
@@ -51,7 +64,31 @@ span {
 }
 
 /* TRANSITION */
-.box:hover {
+/* .box:hover {
   background: forestgreen;
   width: 400px;
+} */
+
+@keyframes spinAndMove {
+  /* = from */
+  0% {
+    left: 0;
+    top: 0;
+    background: #cd5c5c;
+  }
+
+  /* = to */
+  100% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    background: yellowgreen;
+  }
+
+  /* 100% {
+    left: 0;
+    top: 0;
+    background: #cd5c5c;
+  } */
+
 }
