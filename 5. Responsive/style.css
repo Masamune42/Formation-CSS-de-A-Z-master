@@ -1,0 +1,53 @@
+.txt {
+    font-size: 50px;
+}
+
+.txt2 {
+    font-size: 50px;
+}
+
+/* Les conditions remplies */
+/* and: ET / ,: OU */
+@media (max-width: 800px) and (min-width: 500px) {
+    .txt {
+        color: red;
+    }
+}
+
+/* @media (max-width: 800px) {
+    .txt {
+        color: red;
+    }
+}
+
+@media (min-width: 800px) {
+    .txt {
+        color: green;
+    }
+} */
+
+@media print {
+    .txt {
+        color: blue;
+    }
+}
+
+@media screen {
+    .txt {
+        text-decoration: underline 1px blue;
+    }
+}
+
+/* Recherche vocal */
+@media speech {
+    .txt {
+        color: blue;
+    }
+}
+
+/* landscape OU portrait */
+@media (orientation: landscape) {
+    .txt2 {
+        background: salmon;
+    }
+}
