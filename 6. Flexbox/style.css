@@ -31,7 +31,6 @@ body {
     /* Taille des éléments flex */
     /* flex-basis: 170px; */
     flex-shrink: 0;
-    order: 
 }
 
 .item1 {
