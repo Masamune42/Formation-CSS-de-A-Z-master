@@ -4,3 +4,84 @@ body {
     background: #333;
     height: 100vh;
 }
+
+.container {
+    width: 60%;
+    height: 600px;
+    background: lightblue;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* Pour l'exemple avec le 5e élément à droite */
+    /* position: relative; */
+    /* Quand le contenu dépasse de la div, il passe à la ligne */
+    flex-wrap: wrap;
+    /* align-content: space-evenly; */
+
+    /* en flex-direction: column, on inverse les axes : justify-content et align-items sont inversés */
+    /* C'ets intéressant de passer de row à column grâce aux media queries */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    width: 100px;
+    height: 100px;
+    /* Taille des éléments flex */
+    /* flex-basis: 170px; */
+    flex-shrink: 0;
+    order: 
+}
+
+.item1 {
+    background: crimson;
+    /* align-self: flex-start; */
+    /* flew-grow sur tous les items permet de se partager l'espace disponible */
+    /* S'il ya de l'espace disponible, le remplie et responsive */
+    /* flex-grow: 1; */
+
+    /* Taille de l'élément flex */
+    /* A la limite du container, il va rétrécir avec les autres éléments */
+    /* flex-basis: 400px; */
+    /* Si on ne veut pas qu'il rétrécisse, flex-shrink: 0, de base à 1 */
+    /* flex-shrink: 0; */
+    /* Ordre */
+    /* order: 5 */
+}
+
+.item2 {
+    background: violet;
+    /* Alignement de l'item */
+    /* align-self: flex-end; */
+    /* flex-grow: 1; */
+    /* Ordre */
+    /* order: 4 */
+}
+
+.item3 {
+    background: yellowgreen;
+    /* flex-grow: 1; */
+
+    /* grow shrink basis */
+    /* flex: 1 1 auto; */
+    /* Ordre */
+    /* order: 1 */
+}
+
+.item4 {
+    background: azure;
+    /* flex-grow: 1; */
+    /* Ordre */
+    /* order: 2 */
+}
+
+.item5 {
+    background: blue;
+
+    /* Pour que les autres éléments soient centrés mais celui là à droite */
+    /* position: absolute;
+    right: 0; */
+    /* Ordre */
+    /* order: 3 */
+}
