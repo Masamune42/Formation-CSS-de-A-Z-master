@@ -1,3 +1,4 @@
+/* Media Queries */
 .txt {
     font-size: 50px;
 }
@@ -49,5 +50,21 @@
 @media (orientation: landscape) {
     .txt2 {
         background: salmon;
+    }
+}
+
+/* Texte Responsive */
+.titre {
+    font-size: 8vw;
+}
+
+.sousT {
+    font-size: 5vw;
+}
+
+/* On peut utiliser les media queries si jamais à partir d'un certaine taille d'écran (mobile) on a un doute sur la taille du texte */
+@media screen and (max-width: 400px) {
+    .titre {
+        font-size: 30px;
     }
 }
