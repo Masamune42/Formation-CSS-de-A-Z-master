@@ -1,0 +1,109 @@
+// $couleur-txt-base: crimson;
+
+// .item {
+//     color: $couleur-txt-base;
+// }
+
+// NESTING
+// .container {
+//     background: black;
+
+//     ul {
+//         font-size: 40px;
+
+//         .item {
+//             background: lightblue;
+
+//             &:hover {
+//                 color: violet;
+//             }
+//         }
+//     }
+// }
+
+// MIXIN
+// Déclaration en début de code
+// @mixin flexMid {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// // FONCTION SASS
+// @function add($a, $b) {
+//     @return $a+$b;
+// }
+
+// body {
+//     @include flexMid();
+//     height: add(50vh, 50vh);
+// }
+
+// .box {
+//     @include flexMid();
+//     width: 300px;
+//     height: 300px;
+//     background: salmon;
+// }
+
+// .box2 {
+//     width: 100px;
+//     height: 100px;
+//     background: green;
+// }
+
+// EXTEND
+// @mixin ecriture($couleur, $valeur) {
+//     #{$couleur}: $valeur;
+// }
+
+// // Mixin avec des valeurs par défaut
+// @mixin position($fond, $x: 50%, $y: 50%) {
+//     position: absolute;
+//     left: $x;
+//     top: $y;
+//     transform: translate(-$x, -$y);
+//     background: $fond;
+
+//     @if $fond != salmon {
+//         border-radius: 50%;
+//     }
+// }
+
+// .txt {
+//     font-size: 40px;
+//     font-family: sans-serif;
+//     @include ecriture(color, violet);
+// }
+
+// .txt2 {
+//     @extend .txt;
+//     color: #000;
+//     letter-spacing: 2px;
+// }
+
+// .box {
+//     @include position(midnightblue);
+//     width: 250px;
+//     height: 250px;
+// }
+
+// // BOUCLE FOR
+// @for $i from 1 through 6 {
+//     @if $i > 1 {
+//         // @error pour afficher une erreur et arrêter
+//         @warn "Limite dépassée";
+//     }
+//     .item#{$i} {
+//         font-size: 30px + $i * 10;
+//         // Pour debugger
+//         @debug "Valeur de font-size : #{30px + $i * 10}";
+//     }
+// }
+
+// SEGMENTER
+// Position importante
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+@import 'general';

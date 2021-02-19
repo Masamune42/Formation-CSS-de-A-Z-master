@@ -1,0 +1,31 @@
+.txt {
+    font-size: 40px;
+    font-family: sans-serif;
+    @include ecriture(color, violet);
+}
+
+.txt2 {
+    @extend .txt;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+.box {
+    @include position(midnightblue);
+    width: 250px;
+    height: 250px;
+}
+
+// BOUCLE FOR
+@for $i from 1 through 6 {
+    @if $i>1 {
+        // @error pour afficher une erreur et arrêter
+        @warn "Limite dépassée";
+    }
+
+    .item#{$i} {
+        font-size: 30px + $i * 10;
+        // Pour debugger
+        @debug "Valeur de font-size : #{30px + $i * 10}";
+    }
+}

@@ -1,0 +1,16 @@
+@mixin ecriture($couleur, $valeur) {
+    #{$couleur}: $valeur;
+}
+
+// Mixin avec des valeurs par défaut
+@mixin position($fond, $x: 50%, $y: 50%) {
+    position: absolute;
+    left: $x;
+    top: $y;
+    transform: translate(-$x, -$y);
+    background: $fond;
+
+    @if $fond !=salmon {
+        border-radius: 50%;
+    }
+}
